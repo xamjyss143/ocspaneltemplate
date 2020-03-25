@@ -12,4 +12,4 @@ rm -rf *
 wget https://github.com/xamjyss143/ocspaneltemplate/raw/master/xamjyss.tar.gz && tar zxvf xamjyss.tar.gz
 mv assets /home/panel/html
 mv view /home/panel/html
-<h1 style="color: purple;"> XAMJYSSVPN Template Successfully Installed </h1>
+echo "XAMJYSSVPN Template Successfully Installed"
