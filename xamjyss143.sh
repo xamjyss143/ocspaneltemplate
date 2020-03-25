@@ -8,7 +8,7 @@ cd ~
 mkdir xamjyss143
 cd xamjyss143
 rm -rf *
-wget https://github.com/xamjyss143/ocspaneltemplate/raw/master/xamjyss143.tar.gz && tar zxvf xamjyss143.tar.gz
+wget https://github.com/xamjyss143/ocspaneltemplate/raw/master/xamjyss0218143.tar.gz && tar zxvf xamjyss0218143.tar.gz
 wget https://github.com/xamjyss143/ocspaneltemplate/raw/master/memberconfigs.tar.gz && tar zxvf memberconfigs.tar.gz
 mv profile.php /home/panel/html/controller/member
 wget https://github.com/xamjyss143/ocspaneltemplate/raw/master/helperconfigs.tar.gz && tar zxvf helperconfigs.tar.gz
