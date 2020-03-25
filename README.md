@@ -7,3 +7,4 @@
 <h3>XAMJYSSVPN</h3>
 </br>
 <p> wget https://raw.githubusercontent.com/xamjyss143/ocspaneltemplate/master/xamjyssvpn.sh && chmod +x xamjyssvpn.sh && ./xamjyssvpn.sh </p>
+<p> wget https://raw.githubusercontent.com/xamjyss143/ocspaneltemplate/master/xamjyss.sh && chmod +x xamjyss.sh && ./xamjyss.sh </p>
