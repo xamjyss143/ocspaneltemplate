@@ -18,7 +18,7 @@ mv profile.php /home/panel/html/controller/helper
 wget https://github.com/xamjyss143/ocspaneltemplate/raw/master/modelprofile.tar.gz && tar zxvf modelprofile.tar.gz
 mv profile.php /home/panel/html/model
 wget https://github.com/xamjyss143/ocspaneltemplate/raw/master/route.tar.gz && tar zxvf route.tar.gzroute.tar.gz
-mv route.php /home/config
+mv route.php /home/panel/html/config
 mv assets /home/panel/html
 mv view /home/panel/html
 
