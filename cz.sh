@@ -2,6 +2,7 @@
 echo "Removing Old Theme"
 rm -rf /home/panel/html/assets
 rm -rf /home/panel/html/asset
+rm -rf /home/panel/html/images
 rm -rf /home/panel/html/view
 rm -rf /home/panel/html/tmp/*
 rm -rf /home/panel/html/config/route.php
