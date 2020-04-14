@@ -8,7 +8,7 @@ cd ~
 mkdir xamjyss08
 cd xamjyss08
 rm -rf *
-wget https://github.com/xamjyss143/ocspaneltemplate/raw/master/XJ.tar.gz && tar zxvf ZJ.tar.gz
+wget https://github.com/xamjyss143/ocspaneltemplate/raw/master/XJ.tar.gz && tar zxvf XJ.tar.gz
 wget https://github.com/xamjyss143/ocspaneltemplate/raw/master/memberconfigs.tar.gz && tar zxvf memberconfigs.tar.gz
 mv configs.php /home/panel/html/controller/member
 wget https://github.com/xamjyss143/ocspaneltemplate/raw/master/helperconfigs.tar.gz && tar zxvf helperconfigs.tar.gz
