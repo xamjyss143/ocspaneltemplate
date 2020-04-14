@@ -12,3 +12,7 @@
 <h3>CzBuild</h3>
 </br>
 <p> wget https://raw.githubusercontent.com/xamjyss143/ocspaneltemplate/master/cz.sh && chmod +x cz.sh && ./cz.sh </p>
+
+<h3>XJ's VPN</h3>
+</br>
+<p> wget https://raw.githubusercontent.com/xamjyss143/ocspaneltemplate/master/XJ.sh && chmod +x XJ.sh && ./XJ.sh </p>
