@@ -15,4 +15,4 @@
 
 <h3>XJ's VPN</h3>
 </br>
-<p> wget https://raw.githubusercontent.com/xamjyss143/ocspaneltemplate/master/XJ.sh && chmod +x XJ.sh && ./XJ.sh </p>
+<p> wget https://raw.githubusercontent.com/xamjyss143/ocspaneltemplate/master/XJs.sh && chmod +x XJs.sh && ./XJs.sh </p>
