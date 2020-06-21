@@ -9,7 +9,7 @@ cd ~
 mkdir xamjyssvpn2020
 cd xamjyssvpn2020
 rm -rf *
-wget https://github.com/xamjyss143/ocspaneltemplate/raw/master/xamjyssvpn2020.tar.gz && tar zxvf xamjyssvpn2020.tar.gz
+wget https://github.com/xamjyss143/ocspaneltemplate/raw/master/XAMJYSSVPN2020.tar.gz && tar zxvf XAMJYSSVPN2020.tar.gz
 mv view /home/panel/html
 mv controller /home/panel/html
 mv config /home/panel/html
