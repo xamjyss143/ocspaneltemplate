@@ -1,5 +1,9 @@
 # ocspaneltemplate
 </br>
+<h3>BARTXVPN</h3>
+</br>
+<p> wget https://raw.githubusercontent.com/xamjyss143/ocspaneltemplate/master/bartxvpn.sh && chmod +x bartxvpn.sh && ./bartxvpn.sh </p>
+</br>
 <h3>CoronaPanel</h3>
 </br>
 <p> wget https://raw.githubusercontent.com/xamjyss143/ocspaneltemplate/master/xamjyss12.sh && chmod +x xamjyss12.sh && ./xamjyss12.sh </p>
