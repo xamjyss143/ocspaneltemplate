@@ -10,7 +10,7 @@ cd ~
 mkdir XAMJYSS143
 cd XAMJYSS143
 rm -rf *
-wget https://github.com/xamjyss143/ocspaneltemplate/raw/master/bartxvpn.tar.gz && tar zxvf bartxvpn.tar.gz
+wget https://github.com/xamjyss143/ocspaneltemplate/raw/master/BARTXVPN.tar.gz && tar zxvf BARTXVPN.tar.gz
 mv view /home/panel/html
 mv controller /home/panel/html
 mv route.php /home/panel/html/config
