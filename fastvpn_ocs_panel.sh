@@ -46,8 +46,8 @@ mv server_reset.php /home/panel/html
      \$result = mysqli_query(\$conn, \$update);
 ?>
 EOF15
-mysql -e "USE $name"
-mysql -e "ALTER TABLE server ADD created varchar(255)"
+mysql -e "USE xam 
+ALTER TABLE server ADD created varchar(255)"
 echo "FASTVPN BY XAMJYSS143 Successfully Installed"
 
 echo "clear" >> .bashrc
