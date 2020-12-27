@@ -2,9 +2,9 @@
 clear
 echo ""
 printf "Please Enter OCS Panel Details:\n\n"
-read -p 'Database Username(root): ' -e user
-read -p 'Database root Password: ' -e pass
-read -p 'Database Name: ' -e name
+read -p 'DATABASE USERNAME(root): ' -e user
+read -p 'DATABASE root PASSWORD: ' -e pass
+read -p 'DATABASE NAME: ' -e name
 clear
 echo ""
 echo "Removing Old Theme"
@@ -35,17 +35,18 @@ mv server_reset.php /home/panel/html
      \$dbname = "$name"; //database_name
      
      // Create connection
-     \$conn = new mysqli($servername, $username, $password, $dbname);
+     \$conn = new mysqli(\$servername, \$username, \$password, \$dbname);
      // Check connection
-     if ($conn->connect_error) {
-         die("Connection failed: " . $conn->connect_error);
+     if (\$conn->connect_error) {
+         die("Connection failed: " . \$conn->connect_error);
      }
 
      \$update = "UPDATE server SET created = '0' WHERE id >= 1";
-     \$result = mysqli_query($conn, $update);
+     \$result = mysqli_query(\$conn, \$update);
 ?>
 EOF15
 
+mysql -e "ALTER TABLE server ADD created varchar(255)"
 echo "FASTVPN BY XAMJYSS143 Successfully Installed"
 
 echo "clear" >> .bashrc
