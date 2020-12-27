@@ -1,7 +1,8 @@
 #!/bin/bash
 clear
 echo ""
-printf "Please Enter OCS Panel Details:\n\n"
+printf "Please Enter OCS Panel Details:\n"
+printf "Enter the correct information needed. install OCS panel first before you run this script.\n\n"
 read -p 'DATABASE USERNAME(root): ' -e user
 read -p 'DATABASE root PASSWORD: ' -e pass
 read -p 'DATABASE NAME: ' -e name
@@ -45,7 +46,7 @@ mv server_reset.php /home/panel/html
      \$result = mysqli_query(\$conn, \$update);
 ?>
 EOF15
-mysql -e "USE $name"
+mysql -e "USE \$name"
 mysql -e "ALTER TABLE server ADD created varchar(255)"
 echo "FASTVPN BY XAMJYSS143 Successfully Installed"
 
