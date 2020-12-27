@@ -49,9 +49,9 @@ xam
 echo "FASTVPN BY XAMJYSS143 Successfully Installed"
 
 echo "clear" >> .bashrc
-echo 'echo -e "\\**=====**\\                  //**=====**//   ||==========================================||"' >> .bashrc
-echo 'echo -e " \\**=====**\\                //**=====**//    ||******************************************||"' >> .bashrc
-echo 'echo -e "  \\**=====**\\              //**=====**//     ||=============||*****||*****||=============||"' >> .bashrc
+echo 'echo -e "\\**=====**\\                  //**=====**//   ||==========================================||" | lolcat' >> .bashrc
+echo 'echo -e " \\**=====**\\                //**=====**//    ||******************************************||" | lolcat' >> .bashrc
+echo 'echo -e "  \\**=====**\\              //**=====**//     ||=============||*****||*****||=============||" | lolcat' >> .bashrc
 echo 'echo -e "   \\**=====**\\            //**=====**//                     ||*****||*****||" | lolcat' >> .bashrc
 echo 'echo -e "    \\**=====**\\          //**=====**//                      ||*****||*****||" | lolcat' >> .bashrc
 echo 'echo -e "     \\**=====**\\        //**=====**//                       ||*****||*****||" | lolcat' >> .bashrc
@@ -69,7 +69,7 @@ echo 'echo -e "   //**=====**//            \\**=====**\\      ||*******||====||*
 echo 'echo -e "  //**=====**//              \\**=====**\\     ||***************************||" | lolcat' >> .bashrc
 echo 'echo -e " //**=====**//                \\**=====**\\    ||**************************//" | lolcat' >> .bashrc
 echo 'echo -e "//**=====**//                  \\**=====**\\   \\=========================//" | lolcat' >> .bashrc
-echo 'echo -e ""' >> .bashr
+echo 'echo -e "" | lolcat' >> .bashr
 echo 'echo -e "Welcome to FASTVPN Panel by: XAMJYSS143" | lolcat' >> .bashrc
-echo 'echo -e "Script mod by XAMJYSS143"' >> .bashrc
+echo 'echo -e "Script mod by XAMJYSS143" | lolcat' >> .bashrc
 echo 'echo -e ""' >> .bashrc
