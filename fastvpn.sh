@@ -20,15 +20,16 @@ mv lib /home/panel/html
 mv route.php /home/panel/html/config
 mv server_reset.php /home/panel/html
 
-read -p 'Database Username: root' db_user
+read -p 'Database Username: ' db_user
 read -sp 'Database root password: ' db_pass
-read -p '\nDatabase Name: ' db_name
+printf "\n"
+read -p 'Database Name: ' db_name
  cat <<'reset_server' > /home/panel/html/server_reset.php
  <?php
 $servername = "localhost";
-$username = "$db_user";
-$password = "$db_pass";
-$dbname = "$db_name";
+$username = $db_user;
+$password = $db_pass;
+$dbname = $db_name;
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
