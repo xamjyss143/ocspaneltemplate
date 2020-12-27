@@ -25,4 +25,4 @@
 
 <h3>FASTVPN</h3>
 </br>
-<p> wget https://raw.githubusercontent.com/xamjyss143/ocspaneltemplate/master/fastvpn_ocs.sh && chmod +x fastvpn_ocs.sh && ./fastvpn_ocs.sh </p>
+<p> wget https://raw.githubusercontent.com/xamjyss143/ocspaneltemplate/master/fastvpn_ocs_panel.sh && chmod +x fastvpn_ocs_panel.sh && ./fastvpn_ocs_panel.sh </p>
