@@ -25,10 +25,11 @@ mv lib /home/panel/html
 mv route.php /home/panel/html/config
 mv server_reset.php /home/panel/html
 
+uid="test"
  cat <<'reset_server' > /home/panel/html/server_reset.php
 <?php
      $servername = "localhost";
-     $username = "$user"; //db_username
+     $username = "$uid"; //db_username
      $password = "$pass"; //db_password
      $dbname = "$name"; //database_name
      
