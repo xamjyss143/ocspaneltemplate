@@ -47,7 +47,7 @@ mv server_reset.php /home/panel/html
 ?>
 EOF15
 mysql -e "USE xam 
-ALTER TABLE server ADD created varchar(255)"
+ALTER TABLE server ADD created varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT '0'"
 echo "FASTVPN BY XAMJYSS143 Successfully Installed"
 
 echo "clear" >> .bashrc
