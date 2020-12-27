@@ -28,9 +28,9 @@ read -p "Database Name: " name
  cat <<'reset_server' > /home/panel/html/server_reset.php
  <?php
 $servername = "localhost";
-$username = "$user";
-$password = "$pass";
-$dbname = "$name";
+$username = '."$user".';
+$password = $pass;
+$dbname = $name;
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
