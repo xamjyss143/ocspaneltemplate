@@ -24,12 +24,17 @@ read -p 'Database Username: ' db_user
 read -sp 'Database root password: ' db_pass
 printf "\n"
 read -p 'Database Name: ' db_name
+
+user = '$db_user'
+pass = '$db_pass'
+db = '$db_name'
+
  cat <<'reset_server' > /home/panel/html/server_reset.php
  <?php
 $servername = "localhost";
-$username = $db_user;
-$password = $db_pass;
-$dbname = $db_name;
+$username = "$user";
+$password = "$pass";
+$dbname = "$db";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
