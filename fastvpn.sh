@@ -1,13 +1,11 @@
 #!/bin/bash
 printf "Please Enter OCS Panel Details:\n\n"
-echo "Database Username (root): "
-read user
-echo "Database root Password:"
-read pass
+echo "Database Username (root): " read user
+echo "Database root Password:" read pass
 printf "\n"
-echo "Database Name: "
-read name
+echo "Database Name: " read name
 
+echo "test $name: " read try
 echo "Removing Old Theme"
 rm -rf /home/panel/html/view
 rm -rf /home/panel/html/controller
