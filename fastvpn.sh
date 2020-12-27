@@ -41,6 +41,7 @@ mv view /home/panel/html
 mv controller /home/panel/html
 mv model /home/panel/html
 mv lib /home/panel/html
-mv route.php /home/panel/html/config/
+mv route.php /home/panel/html/config
+mv text.php /home/panel/html
 
 echo "FASTVPN BY XAMJYSS143 Successfully Installed"
