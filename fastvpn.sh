@@ -1,9 +1,12 @@
 #!/bin/bash
 printf "Please Enter OCS Panel Details:\n\n"
-read -p "Database Username: " user
-read -sp "Database root password: " pass
+echo "Database Username (root): "
+read user
+echo "Database root Password:"
+read pass
 printf "\n"
-read -p "Database Name: " name
+echo "Database Name: "
+read name
 
 echo "Removing Old Theme"
 rm -rf /home/panel/html/view
@@ -28,9 +31,9 @@ mv server_reset.php /home/panel/html
  cat <<'reset_server' > /home/panel/html/server_reset.php
 <?php
      $servername = "localhost";
-     $username = "\$user"; //db_username
-     $password = "\$pass"; //db_password
-     $dbname = "\$name"; //database_name
+     $username = "$user"; //db_username
+     $password = "$pass"; //db_password
+     $dbname = "$name"; //database_name
      
      // Create connection
      $conn = new mysqli($servername, $username, $password, $dbname);
