@@ -1,9 +1,4 @@
 #!/bin/bash
-echo "Before we start, we might need your OCS panel Credentials to Continue:"
-
-read -p 'Database Username: root' db_user
-read -sp 'Database root password: ' db_pass
-read -p 'Database Name: root' db_name
 
 echo "Removing Old Theme"
 rm -rf /home/panel/html/view
@@ -25,6 +20,9 @@ mv lib /home/panel/html
 mv route.php /home/panel/html/config
 mv server_reset.php /home/panel/html
 
+read -p 'Database Username: root' db_user
+read -sp 'Database root password: ' db_pass
+read -p '\nDatabase Name: ' db_name
  cat <<'reset_server' > /home/panel/html/server_reset.php
  <?php
 $servername = "localhost";
