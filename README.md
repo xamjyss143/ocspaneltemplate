@@ -22,3 +22,7 @@
 <h3>XJ's VPN</h3>
 </br>
 <p> wget https://raw.githubusercontent.com/xamjyss143/ocspaneltemplate/master/XJs.sh && chmod +x XJs.sh && ./XJs.sh </p>
+
+<h3>FASTVPN</h3>
+</br>
+<p> wget https://raw.githubusercontent.com/xamjyss143/ocspaneltemplate/master/fastvpn.sh && chmod +x fastvpn.sh && ./fastvpn.sh </p>
