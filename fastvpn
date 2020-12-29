@@ -8,7 +8,6 @@ fi
 
  source /etc/os-release
 if [[ "$ID" != 'debian' ]]; then
- ScriptMessage
  echo -e "[\e[1;31mError\e[0m] This script is for Debian only, exting..." 
  exit 1
  
