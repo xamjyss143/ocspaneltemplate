@@ -1,19 +1,17 @@
 #!/bin/bash
+clear
+echo ""
 if [ $USER != 'root' ]; then
-	echo "You must run this as root"
-	exit
+ echo -e "[\e[1;31mError\e[0m] You must run this script as root only"
+	exit 1
 fi
 
-# initialisasi var
-export DEBIAN_FRONTEND=noninteractive
-OS=`uname -m`;
-
-if [[ -e /etc/debian_version ]]; then
-	#OS=debian
-	RCLOCAL='/etc/rc.local'
-else
-	echo "You are not running this script on Debian OS"
-	exit
+ source /etc/os-release
+if [[ "$ID" != 'debian' ]]; then
+ ScriptMessage
+ echo -e "[\e[1;31mError\e[0m] This script is for Debian only, exting..." 
+ exit 1
+ 
 fi
 clear
 echo ""
