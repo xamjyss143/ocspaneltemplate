@@ -67,8 +67,7 @@ mv server_reset.php /home/panel/html
      echo "0 0 * * * php /home/panel/html/server_reset.php" >> mycron
      #install new cron file
      crontab mycron
-     rm mycron
-     service crontab restart
+     service cron restart
 ?>
 EOF15
 mysql -e "USE $name 
