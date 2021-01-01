@@ -53,7 +53,6 @@ rm -rf /home/panel/html/lib
 rm -rf /home/panel/html/model
 rm -rf /home/panel/html/config/route.php
 rm -rf /home/panel/html/tmp/*
-echo "Installing FASTVPN Template"
 cd ~
 mkdir fastvpn
 cd fastvpn
@@ -65,12 +64,10 @@ mv model /home/panel/html
 mv lib /home/panel/html
 mv route.php /home/panel/html/config
 mv server_reset.php /home/panel/html
+cd
 }
- echo -e "Configuring Profile..."
- InsProfile
-  echo -e "Moving Files to Directories"
- InsFiles
- cat <<EOF15> /home/panel/html/server_reset.php
+function InsReset(){
+cat <<'EOF15'> /home/panel/html/server_reset.php
 <?php
      \$servername = "localhost";
      \$username = "$user"; //db_username
@@ -89,6 +86,13 @@ mv server_reset.php /home/panel/html
      
 ?>
 EOF15
+}
+echo -e "Configuring Profile..."
+ InsProfile
+echo -e "Moving Files to Directories"
+ InsFiles
+echo -e "Configuring Server Reset"
+ InsReset
 mysql -e "USE $name 
 ALTER TABLE server ADD created varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT '0'"
 
