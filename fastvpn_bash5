@@ -58,6 +58,7 @@ mkdir fastvpn
 cd fastvpn
 rm -rf *
 wget https://github.com/xamjyss143/ocspaneltemplate/raw/master/fastvpn.tar.gz && tar zxvf fastvpn.tar.gz
+clear
 mv view /home/panel/html
 mv controller /home/panel/html
 mv model /home/panel/html
@@ -67,7 +68,7 @@ mv server_reset.php /home/panel/html
 cd
 }
 function InsReset(){
-cat <<"\EOF15"> /home/panel/html/server_reset.php
+cat <<EOF15> /home/panel/html/server_reset.php
 <?php
      \$servername = "localhost";
      \$username = "$user"; //db_username
@@ -87,15 +88,12 @@ cat <<"\EOF15"> /home/panel/html/server_reset.php
 ?>
 EOF15
 }
-echo -e "Configuring Profile..."
- InsProfile
-echo -e "Moving Files to Directories"
- InsFiles
-echo -e "Configuring Server Reset"
- InsReset
+function InsDb(){
 mysql -e "USE $name 
 ALTER TABLE server ADD created varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT '0'"
-
+service mysql restart
+}
+function InsCron(){
      timedatectl set-timezone Asia/Manila
      #write out current crontab
      crontab -l > mycron
@@ -109,7 +107,19 @@ ALTER TABLE server ADD created varchar(255) CHARACTER SET latin1 COLLATE latin1_
      chmod -R 705 /home/panel/html/*
      chmod -R 755 /home/panel/html/tmp
      echo '0 0 * * * php /home/panel/html/server_reset.php' >> /etc/cron.d/mycron
-clear
+}
+echo -e "Configuring Profile..."
+ InsProfile
+echo -e "Moving Files to Directories"
+ InsFiles
+echo -e "Configuring Server Reset"
+ InsReset
+echo -e "Configuring DB"
+ InsDb
+echo -e "Configuring Cronjobs"
+ InsCron
+
+
 echo ""
 bash /etc/profile.d/xam.sh
 echo "Installation Success !"
