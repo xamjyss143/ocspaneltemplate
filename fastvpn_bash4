@@ -67,7 +67,7 @@ mv server_reset.php /home/panel/html
 cd
 }
 function InsReset(){
-cat <<'\EOF15'> /home/panel/html/server_reset.php
+cat <<"\EOF15"> /home/panel/html/server_reset.php
 <?php
      \$servername = "localhost";
      \$username = "$user"; //db_username
