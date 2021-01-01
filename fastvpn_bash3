@@ -85,6 +85,7 @@ cat <<'\EOF15'> /home/panel/html/server_reset.php
      \$result = mysqli_query(\$conn, \$update);
      
 ?>
+EOF15
 }
 echo -e "Configuring Profile..."
  InsProfile
