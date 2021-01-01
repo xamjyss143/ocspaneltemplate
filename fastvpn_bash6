@@ -1,25 +1,4 @@
 #!/bin/bash
-clear
-echo ""
-if [ $USER != 'root' ]; then
- echo -e "[\e[1;31mError\e[0m] You must run this script as root only"
-	exit 1
-fi
-
- source /etc/os-release
-if [[ "$ID" != 'debian' ]]; then
- echo -e "[\e[1;31mError\e[0m] This script is for Debian only, exting..." 
- exit 1
- 
-fi
-clear
-echo ""
-printf "Please Enter OCS Panel Details:\n"
-printf "Enter the correct information base from OCS panel MySQL Credentials. install OCS panel first before you run this script.\n\n"
-read -p 'DATABASE USERNAME(root): ' -e user
-read -p 'DATABASE root PASSWORD: ' -e pass
-read -p 'DATABASE NAME: ' -e name
-clear
 function InsProfile(){
 echo 'clear' > /etc/profile.d/xam.sh
 echo 'echo '' > /var/log/syslog' >> /etc/profile.d/xam.sh
@@ -108,6 +87,27 @@ function InsCron(){
      chmod -R 755 /home/panel/html/tmp
      echo '0 0 * * * php /home/panel/html/server_reset.php' >> /etc/cron.d/mycron
 }
+clear
+echo ""
+if [ $USER != 'root' ]; then
+ echo -e "[\e[1;31mError\e[0m] You must run this script as root only"
+	exit 1
+fi
+
+ source /etc/os-release
+if [[ "$ID" != 'debian' ]]; then
+ echo -e "[\e[1;31mError\e[0m] This script is for Debian only, exting..." 
+ exit 1
+ 
+fi
+clear
+echo ""
+printf "Please Enter OCS Panel Details:\n"
+printf "Enter the correct information base from OCS panel MySQL Credentials. install OCS panel first before you run this script.\n\n"
+read -p 'DATABASE USERNAME(root): ' -e user
+read -p 'DATABASE root PASSWORD: ' -e pass
+read -p 'DATABASE NAME: ' -e name
+clear
 echo -e "Configuring Profile..."
  InsProfile
 echo -e "Moving Files to Directories"
@@ -119,8 +119,8 @@ echo -e "Configuring DB"
 echo -e "Configuring Cronjobs"
  InsCron
 
-
-echo ""
+ clear
+ cd ~
 bash /etc/profile.d/xam.sh
 echo "Installation Success !"
 echo "FASTVPN BY XAMJYSS143 Successfully Installed"
