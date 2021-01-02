@@ -50,9 +50,9 @@ function InsReset(){
 cat <<EOF15> /home/panel/html/server_reset.php
 <?php
      \$servername = "localhost";
-     \$username = "$user"; //db_username
-     \$password = "$pass"; //db_password
-     \$dbname = "$name"; //database_name
+     \$username = "$DatabaseUser"; //db_username
+     \$password = "$DatabasePass"; //db_password
+     \$dbname = "$DatabaseName"; //database_name
      
      // Create connection
      \$conn = new mysqli(\$servername, \$username, \$password, \$dbname);
@@ -68,7 +68,7 @@ cat <<EOF15> /home/panel/html/server_reset.php
 EOF15
 }
 function InsDb(){
-mysql -e "USE $name 
+mysql -e "USE $DatabaseName 
 ALTER TABLE server ADD created varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT '0'"
 service mysql restart
 }
@@ -101,22 +101,24 @@ if [[ "$ID" != 'debian' ]]; then
  
 fi
 clear
-echo ""
-printf "Please Enter OCS Panel Details:\n"
-printf "Enter the correct information base from OCS panel MySQL Credentials. install OCS panel first before you run this script.\n\n"
-read -p 'DATABASE USERNAME(root): ' -e user
-read -p 'DATABASE root PASSWORD: ' -e pass
-read -p 'DATABASE NAME: ' -e name
+OcsPanelConfig='/home/panel/html/config/inc.php'
+if [[ ! -e "${OcsPanelConfig}" ]]; then
+echo 'OCS Panel config/inc.php file not found'
+else
+DatabaseName="$(cat < ${OcsPanelConfig} | grep -Eo 'dbname=([a-zA-Z0-9_]{1,})' | cut -d"=" -f2)"
+DatabaseUser="$(cat < ${OcsPanelConfig} | grep -Eo 'DB_USER=\"([a-zA-Z0-9_]{1,})\"' | cut -d"=" -f2 | tr -d '\"')"
+DatabasePass="$(cat < ${OcsPanelConfig} | grep -Eo 'DB_PASS=\"([a-zA-Z0-9_]{1,})\"' | cut -d"=" -f2 | tr -d '\"')"
+fi
 clear
 echo -e "Configuring Profile..."
  InsProfile
-echo -e "Moving Files to Directories"
+echo -e "Moving Files to Directories..."
  InsFiles
-echo -e "Configuring Server Reset"
+echo -e "Configuring Server Reset..."
  InsReset
-echo -e "Configuring DB"
+echo -e "Configuring DB..."
  InsDb
-echo -e "Configuring Cronjobs"
+echo -e "Configuring Cronjobs..."
  InsCron
 
  clear
